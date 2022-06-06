@@ -1,8 +1,20 @@
-# Covid19Tracker
+# ConnavirusApp
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.
+Les données que j’ai utilisé:
+https://github.com/CSSEGISandData/COVID-19
+Les outils et techo que j’ai utilisé:
+Angular 9 pour la logique applicati
+Ionic 5 pour implémenter des vues responsive
+RxJs pour la manipulation des données
+OpenLayer Map pour l’implémentation de la carte
+La librairie Chart.js pour les diagrammes de visualisation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+
+##Et le backend??
+pas besoin de backend pour le moment! J’ai simplement consommer les données directement depuis le repository GitHub via une requête HTTP pour récupérer le contenu des documents qui m’intéressent.
 
 ## Development server
+
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
