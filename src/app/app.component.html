@@ -1,0 +1,40 @@
+
+<ion-app>
+  <ion-split-pane  contentId="main">
+    <ion-menu contentId="main">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>{{ title }}</ion-title>
+        </ion-toolbar>
+        <ion-toolbar>
+          <ion-searchbar animated (ionChange)="searchCountry($event)"></ion-searchbar>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+          <ion-list>
+            <ion-item
+              (click)="handleAction(item)"
+              *ngFor= "let item of data$|async|groupBy:'Country_Region'|filtre:search;let i = index">
+              <ion-label>{{item?.key}}</ion-label>
+              <ion-badge color="danger" mode="ios" slot="end">
+                {{item?.value|totalBy:"Deaths"}}
+              </ion-badge>
+            </ion-item>
+          </ion-list>
+      </ion-content>
+    </ion-menu>
+  <ion-content id="main">
+      <ion-toolbar>
+        <ion-menu-button menuId="mainMenu"  color="primary" slot="start"></ion-menu-button>
+      </ion-toolbar>
+    <ion-card>
+    <app-map [data]="data$|async|groupBy:'Country_Region'"
+    [options]="{radiusMarkerKey:'Deaths',zoom: 1,center:[-4.3180,15.3272]}"
+    (action)="handleAction($event)"></app-map>
+    </ion-card>
+    <ion-card>
+      <app-chart></app-chart>
+    </ion-card>
+  </ion-content>
+</ion-split-pane>
+</ion-app>
