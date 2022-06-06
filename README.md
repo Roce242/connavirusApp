@@ -9,8 +9,7 @@ RxJs pour la manipulation des données
 OpenLayer Map pour l’implémentation de la carte
 La librairie Chart.js pour les diagrammes de visualisation
 
-
-##Et le backend??
+Et le backend?
 pas besoin de backend pour le moment! J’ai simplement consommer les données directement depuis le repository GitHub via une requête HTTP pour récupérer le contenu des documents qui m’intéressent.
 
 ## Development server
